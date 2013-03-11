@@ -42,7 +42,7 @@ class MozTrapAdminProductListingPage(Page):
 
     @property
     def are_products_selected(self):
-        return '0 of ' not in self.selenium.find_element(*self._action_counter_locator).text
+        return self.selenium.find_element(*self._action_counter_locator).text[:3] != '0 of'
 
     @property
     def was_deletion_successful(self):

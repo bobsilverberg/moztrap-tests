@@ -4,9 +4,6 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-import requests
-import json
-
 from pages.home_page import MozTrapHomePage
 from pages.create_case_page import MozTrapCreateCasePage
 from pages.manage_cases_page import MozTrapManageCasesPage

@@ -34,7 +34,6 @@ def product(request):
     def fin():
         # If a product was created via the API it will be stored in mozwebqa
         if hasattr(request, 'product'):
-            api = MoztrapAPI(credentials['username'], credentials['api_key'], mozwebqa.base_url)
             api.delete_product(request.product)
     request.addfinalizer(fin)
     return request.product

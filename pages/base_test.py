@@ -148,7 +148,7 @@ class BaseTest(object):
         suite = self.create_suite(mozwebqa, product=product)
         case = self.create_case(mozwebqa, product=product, version=product['version'], suite_name=suite['name'])
         case['profile'] = profile
-        run = self.create_run(mozwebqa, activate=True, product=product, version=product['version'], suite_name_list=[suite['name']])
+        run = self.create_run(mozwebqa, product=product, activate=True, version=product['version'], suite_name_list=[suite['name']])
 
         home_pg.go_to_home_page()
         home_pg.go_to_run_test(product_name=product['name'], version_name=product['version']['name'], run_name=run['name'], env_category=profile['category'], env_element=profile['element'])
